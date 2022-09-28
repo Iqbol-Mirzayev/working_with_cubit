@@ -1,4 +1,6 @@
+import 'package:base_bloc/cubit/calculator/calculator_cubit.dart';
 import 'package:base_bloc/cubit/counter/counter_cubit.dart';
+import 'package:base_bloc/view/calculator_page.dart';
 import 'package:base_bloc/view/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -20,11 +22,11 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
      
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blueGrey,
       ),
       home:BlocProvider(
-        child: const MyHomePage(),
-        create:(_)=> CounterCubit())
+        child: const CalculatorPage(),
+        create:(_)=> CalculatorCubit())
         
     );
   }

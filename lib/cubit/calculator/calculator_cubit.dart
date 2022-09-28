@@ -28,19 +28,20 @@ class CalculatorCubit extends Cubit<CalculatorState> {
     emit(DivisionResultState(result: result));
   }
 
-  void calculate(double a, double b, int operationType) {
+  void calculate(double a, double b, var operationType) {
     switch (operationType) {
-      case 1:
+      case "+":
         emit(UniversalState(result: a + b));
         break;
-      case 2:
+      case "*":
         emit(UniversalState(result: a + b));
         break;
-      case 3:
+      case "-":
         emit(UniversalState(result: a - b));
         break;
-      default:
+      case "/":
         emit(UniversalState(result: a / b));
+        break;
     }
   }
 }
